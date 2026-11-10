@@ -1,4 +1,4 @@
-const PHONE1='9343712333', PHONE2='9845626810', WHATSAPP='919343712333', EMAIL='sjcranes93@gmail.com';
+const PHONE1='9845626810', PHONE2='9343712333', WHATSAPP='919845626810', EMAIL='sjcranes93@gmail.com';
 const API_URL=''; // Optional: e.g. https://your-api.example.com/api
 const capacities=['12 Ton','20 Ton','25 Ton','40 Ton','50 Ton','60 Ton','80 Ton','100 Ton','Above 100 Ton'];
 const images=[
