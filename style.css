@@ -3,14 +3,31 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--white);color:#171717;font:15px/1.65 Inter,Arial,sans-serif}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.container{width:min(var(--container),calc(100% - 48px));margin:auto}
 .topline{background:#090909;color:#eee;font-size:10px;letter-spacing:.12em;text-transform:uppercase}.top-inner{min-height:34px;display:flex;align-items:center;justify-content:space-between}.top-inner a{color:var(--yellow);font-weight:800}
 .site-header{position:sticky;top:0;z-index:50;background:rgba(248,247,243,.97);border-bottom:1px solid #e7e4dd;backdrop-filter:blur(12px)}.nav-inner{min-height:76px;display:flex;align-items:center;gap:18px}.nav-inner>img{width:58px;height:58px;object-fit:contain;flex:none}.nav-inner:after{content:"SJ CRANES SERVICES";font:900 19px "Barlow Condensed",sans-serif;letter-spacing:.06em;margin-right:auto}.nav-links{display:flex;align-items:center;gap:25px}.nav-links a{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.nav-links a:hover{color:var(--orange)}.nav-links .nav-cta{background:var(--orange);color:white;padding:13px 18px}.menu-button{display:none}
-.hero{
-  min-height:680px;
-  position:relative;
-  overflow:hidden;
-  color:white;
-  background:
-    linear-gradient(90deg, rgba(8,9,11,.82), rgba(8,9,11,.55) 55%, rgba(8,9,11,.3)),
-    url("./Construction Site.png") center / cover no-repeat;
+/* HERO FONT DESIGN */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.hero h1 em {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  color: #ff7417;
+}
+
+.hero p {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
 }
 .section{padding:100px 0}.section h2{font-size:clamp(36px,4.2vw,58px);line-height:.98;font-weight:900;margin:0}.section h2 span{color:var(--orange)}.about-grid{display:grid;grid-template-columns:1fr 2fr .85fr;gap:42px;align-items:center}.about-copy h2{margin-bottom:20px}.about-copy .lead{font-size:19px;line-height:1.45}.about-copy p:not(.lead){color:#666;line-height:1.85}.text-link{display:inline-block;margin-top:10px;padding-bottom:8px;border-bottom:1px solid var(--orange);font-size:11px;font-weight:800;text-transform:uppercase}.about-stat{border-left:1px solid #d6d2ca;padding-left:26px}.stat-number{font-size:58px;line-height:1;font-weight:900}.stat-number span{color:var(--orange);font-size:30px}.about-stat small{display:block;color:#888;font-size:9px;letter-spacing:.12em;line-height:1.8}.about-stat small b{color:#222}.about-stat hr{border:0;border-top:1px solid #d6d2ca;margin:25px 0}
 .dark-section,.projects-section,.contact-section{background:#111;color:#f7f7f7}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:48px}.section-heading h2{margin-top:18px}.section-heading>p{max-width:245px;color:#aaa;margin:0 0 5px;font-size:14px}.orange{color:var(--orange)}.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,254px));gap:16px}.service-card{background:#1b1b1b;border:1px solid #ffffff14}.service-image{height:205px;position:relative;overflow:hidden}.service-image img{width:100%;height:100%;object-fit:cover}.service-image b{position:absolute;top:12px;right:14px;color:white}.service-body{min-height:230px;padding:20px}.service-icon{color:var(--orange);font-size:22px}.service-body h3{font-size:24px;margin:15px 0 8px}.service-body p{min-height:55px;color:#aaa;font-size:12px}.service-body a{color:var(--yellow);font-size:10px;font-weight:800;text-transform:uppercase}
