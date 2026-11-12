@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <title>Project Enquiry | SJ Cranes Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:light;--ink:#111;--paper:#f5f3ee;--orange:#ff7417;--green:#19a95b;--muted:#8790a0;--line:#d7d2c9}
+    *{box-sizing:border-box}
+    body{min-height:100vh;margin:0;padding:32px 16px;display:grid;place-items:center;background:#101010;color:var(--ink);font:14px/1.5 Inter,Arial,sans-serif}
+    .enquiry{width:min(100%,587px);padding:30px 32px 28px;background:var(--paper)}
+    .heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:16px;margin-bottom:19px;border-bottom:1px solid var(--line)}
+    .heading span,.field label{font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+    .heading span{color:var(--orange)}
+    .heading h1{margin:0;font:700 23px/1 'Barlow Condensed',Impact,sans-serif;text-transform:uppercase}
+    .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+    .field{display:block;min-width:0;margin-bottom:14px}
+    .field label{display:block;margin-bottom:7px;color:#46536a}
+    input,select,textarea{display:block;width:100%;min-height:43px;padding:0 11px;border:1px solid #d5d0c7;border-radius:0;background:#fff;color:#161616;font:600 12px Inter,Arial,sans-serif;letter-spacing:.035em}
+    input::placeholder,textarea::placeholder{color:#929bad;opacity:1}
+    input:focus,select:focus,textarea:focus{outline:2px solid #ff741755;border-color:var(--orange)}
+    textarea{min-height:77px;padding:11px;resize:vertical;line-height:1.5}
+    .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .button{min-height:39px;padding:0 14px;display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;color:white;text-decoration:none;font:800 9px Inter,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+    .prepare{background:var(--orange)}.whatsapp{background:var(--green)}.email{background:#111}
+    .button:hover{filter:brightness(.92)}.button:focus-visible{outline:3px solid #253e5d;outline-offset:3px}
+    .notice{min-height:0;margin:6px 0 0;color:#287a43;font-size:12px}.notice:empty{display:none}
+    .footnote{display:block;margin-top:12px;color:#858b95;font-size:9px}
+    @media(max-width:520px){body{padding:18px 12px}.enquiry{padding:24px 20px}.row{grid-template-columns:1fr;gap:0}.heading h1{font-size:21px}.actions .button{flex:1 1 100%}}
+  </style>
+</head>
+<body>
+  <main class="enquiry">
+    <form id="quoteForm">
+      <header class="heading"><span>Request a quote</span><h1>Project Enquiry</h1></header>
+      <div class="row">
+        <div class="field"><label for="customer_name">Customer name *</label><input id="customer_name" name="customer_name" autocomplete="name" required placeholder="Your name"></div>
+        <div class="field"><label for="company_name">Company name</label><input id="company_name" name="company_name" autocomplete="organization" placeholder="Company (optional)"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" minlength="7" required placeholder="Your phone number"></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="location">Project location *</label><input id="location" name="location" required placeholder="City / site location"></div>
+        <div class="field"><label for="project_date">Project date</label><input id="project_date" name="project_date" type="date"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="crane_type">Crane type</label><select id="crane_type" name="crane_type"><option>Mobile Crane</option><option>Hydraulic Crane</option></select></div>
+        <div class="field"><label for="capacity">Required capacity</label><select id="capacity" name="capacity"><option>12 Ton</option><option>20 Ton</option><option>25 Ton</option><option>40 Ton</option><option>50 Ton</option><option>60 Ton</option><option>80 Ton</option><option>100 Ton</option><option>Above 100 Ton</option></select></div>
+      </div>
+      <div class="field"><label for="requirements">What are you lifting? *</label><input id="requirements" name="requirements" required placeholder="Brief lifting requirement"></div>
+      <div class="field"><label for="message">Additional message</label><textarea id="message" name="message" rows="3" placeholder="Tell us about access, height or site conditions"></textarea></div>
+      <p class="notice" id="formNotice" role="status" aria-live="polite"></p>
+      <div class="actions">
+        <button class="button prepare" type="submit">Prepare enquiry <span aria-hidden="true">↗</span></button>
+        <a class="button whatsapp" id="formWhatsapp" href="https://wa.me/919845626810" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
+        <a class="button email" id="formEmail" href="mailto:sjcranes93@gmail.com">Email <span aria-hidden="true">✉</span></a>
+      </div>
+      <small class="footnote">Your details are used only to respond to this project enquiry.</small>
+    </form>
+  </main>
+  <script>
+    (()=>{
+      const form=document.getElementById('quoteForm');
+      const whatsapp=document.getElementById('formWhatsapp');
+      const emailLink=document.getElementById('formEmail');
+      const notice=document.getElementById('formNotice');
+      const details=()=>Object.fromEntries(new FormData(form).entries());
+      const enquiryText=data=>[
+        'Hello SJ Cranes Services, I need a quote.',
+        `Name: ${data.customer_name||'Not provided'}`,
+        `Company: ${data.company_name||'Not provided'}`,
+        `Phone: ${data.phone||'Not provided'}`,
+        `Email: ${data.email||'Not provided'}`,
+        `Location: ${data.location||'Not provided'}`,
+        `Project date: ${data.project_date||'Not provided'}`,
+        `Crane type: ${data.crane_type||'Not provided'}`,
+        `Capacity: ${data.capacity||'Not provided'}`,
+        `Lifting requirement: ${data.requirements||'Not provided'}`,
+        `Additional message: ${data.message||'None'}`
+      ].join('\n');
+      const refresh=()=>{
+        const data=details();
+        const text=enquiryText(data);
+        whatsapp.href=`https://wa.me/919845626810?text=${encodeURIComponent(text)}`;
+        emailLink.href=`mailto:sjcranes93@gmail.com?subject=${encodeURIComponent('Project enquiry - '+(data.customer_name||'SJ Cranes website'))}&body=${encodeURIComponent(text)}`;
+      };
+      form.addEventListener('input',refresh);
+      form.addEventListener('change',refresh);
+      form.addEventListener('submit',event=>{
+        event.preventDefault();
+        if(!form.reportValidity())return;
+        refresh();
+        notice.textContent='Your enquiry is ready. Choose WhatsApp or Email to send it to our team.';
+        window.open(whatsapp.href,'_blank','noopener,noreferrer');
+      });
+      refresh();
+    })();
+  </script>
+</body>
+</html>
