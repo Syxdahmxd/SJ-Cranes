@@ -3,14 +3,14 @@ const API_URL=''; // Optional: e.g. https://your-api.example.com/api
 const capacities=['12 Ton','20 Ton','25 Ton','40 Ton','50 Ton','60 Ton','80 Ton','100 Ton','Above 100 Ton'];
 const images=[
   './12 Ton.png',
-  './Hydra.png',
   './F15.png',
+  './Farana.png',
   './Farana.png',
   './Sany.jpeg',
   './Tadano.jpeg',
   './Zoomlion.jpeg',
   './Luna.jpeg',
-  './12 Ton.png'
+  './Sany.jpeg'
 ];
 const fleet=capacities.map((capacity,i)=>({
   capacity,
