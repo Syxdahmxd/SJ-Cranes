@@ -16,12 +16,12 @@ const fleet=capacities.map((capacity,i)=>({
   capacity,
   category:i%2?'Hydraulic Crane':'Mobile Crane',
   manufacturer:
-    capacity==='12 Ton'?'F15 Crane':
-    capacity==='20 Ton'?'SANY Crane':
-    capacity==='25 Ton'?'Farana Crane':
-    capacity==='60 Ton'?'Tadano Crane':
-    capacity==='80 Ton'?'Zoomlion Crane':
-    capacity==='100 Ton'?'Luna Crane':
+    capacity==='12 Ton'?'12 Ton.png':
+    capacity==='20 Ton'?'F15.png':
+    capacity==='25 Ton'?'Farana.png':
+    capacity==='60 Ton'?'Tadano.jpeg':
+    capacity==='80 Ton'?'Zoomlion.jpeg':
+    capacity==='100 Ton'?'Sany.jpeg':
     'SJ Cranes',
   image:images[i % images.length]
 }));
