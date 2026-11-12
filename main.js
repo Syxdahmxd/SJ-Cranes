@@ -26,7 +26,11 @@ const fleet=capacities.map((capacity,i)=>({
   image:images[i % images.length]
 }));
 const fleetGrid=document.getElementById('fleetGrid'), capFilter=document.getElementById('capacityFilter'), formCapacity=document.getElementById('formCapacity');
-if(capFilter&&formCapacity){capacities.forEach(c=>{capFilter.add(new Option(c,c));formCapacity.add(new Option(c,c));});}
+if(capFilter&&formCapacity){
+  capFilter.replaceChildren(new Option('All capacities', 'All capacities'));
+  formCapacity.replaceChildren();
+  capacities.forEach(c=>{capFilter.add(new Option(c,c));formCapacity.add(new Option(c,c));});
+}
 let selectedCategory='All';
 function renderFleet(){
   if(!fleetGrid||!capFilter)return;
