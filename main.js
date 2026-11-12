@@ -3,7 +3,7 @@ const API_URL=''; // Optional: e.g. https://your-api.example.com/api
 const capacities=['12 Ton','20 Ton','25 Ton','40 Ton','50 Ton','60 Ton','80 Ton','100 Ton','Above 100 Ton'];
 const images=[
   './12 Ton.png',
-  './F15.png',
+  './F20.jpeg',
   './Farana.png',
   './Farana.png',
   './Sany.jpeg',
@@ -17,7 +17,7 @@ const fleet=capacities.map((capacity,i)=>({
   category:i%2?'Hydraulic Crane':'Mobile Crane',
   manufacturer:
     capacity==='12 Ton'?'12 Ton.png':
-    capacity==='20 Ton'?'F15.png':
+    capacity==='20 Ton'?'F20':
     capacity==='25 Ton'?'Farana.png':
     capacity==='60 Ton'?'Tadano.jpeg':
     capacity==='80 Ton'?'Zoomlion.jpeg':
