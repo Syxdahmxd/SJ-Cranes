@@ -981,3 +981,49 @@ footer {
     bottom: 15px;
   }
 }
+
+/* Show each crane's existing capacity and enquiry control over its photo. */
+.fleet-card > div {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+}
+.fleet-card .category {
+  order: 1;
+}
+.fleet-card p {
+  order: 2;
+  margin: 8px 0 2px;
+  color: #fff;
+  font: 700 32px/1.1 "Barlow Condensed", Impact, sans-serif;
+}
+.fleet-card h3 {
+  order: 3;
+  margin: 4px 0 10px;
+  color: #ddd;
+  font: 400 11px/1.5 Inter, Arial, sans-serif;
+}
+.fleet-card button[data-capacity] {
+  order: 4;
+  align-self: flex-start;
+  min-height: 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+.fleet-card button[data-capacity]:hover {
+  color: var(--yellow);
+}
+@media (max-width: 650px) {
+  .fleet-card > div {
+    padding: 20px;
+  }
+}
