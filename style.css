@@ -465,14 +465,14 @@ h3,
 .fleet-card:hover > img {
   transform: scale(1.05);
 }
-..fleet-card:after {
+.fleet-card:after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(8, 10, 14, 0.20) 0%,
-    rgba(8, 10, 14, 0.12) 40%,
+    rgba(8, 10, 14, 0.32) 0%,
+    rgba(8, 10, 14, 0.24) 40%,
     rgba(0, 0, 0, 0.82) 100%
   );
 }
