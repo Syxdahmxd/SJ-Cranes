@@ -1,0 +1,10 @@
+/* Match the supplied fleet-photo example: a subtle dark tint across the photo,
+   with a deeper lower gradient to keep the capacity and enquiry link readable. */
+.fleet-card:after {
+  background: linear-gradient(
+    180deg,
+    rgba(8, 10, 14, 0.24) 0%,
+    rgba(8, 10, 14, 0.14) 42%,
+    rgba(0, 0, 0, 0.82) 100%
+  );
+}
