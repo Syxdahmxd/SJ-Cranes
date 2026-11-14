@@ -606,10 +606,19 @@ h3,
 }
 .map-link {
   display: inline-flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 9px;
   color: var(--yellow);
   font-size: 10px;
   font-weight: 800;
+  letter-spacing: 0.1em;
+}
+.map-link svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
 }
 .map-link small {
   margin-top: 5px;
