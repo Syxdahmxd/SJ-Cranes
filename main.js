@@ -5,7 +5,7 @@ const images=[
   './12 Ton.png',
   './F20.jpeg',
   './Farana.png',
-  './Farana.png',
+  './F40.jpeg',
   './Sany.jpeg',
   './Tadano.jpeg',
   './Zoomlion.jpeg',
